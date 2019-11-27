@@ -76,7 +76,7 @@ int isbuiltin(char **cmds, char *buffer)
 
 	while (builtins[i].name != NULL)
 	{
-		len = strlen(cmds[0]);
+		len = _strlen(cmds[0]);
 		if (_strncmp(cmds[0], "exit", 4) == 0)
 		{
 			if (cmds[0][4] == 0)
