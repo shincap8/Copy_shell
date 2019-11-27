@@ -27,7 +27,6 @@ void launch(void)
 	buffer = NULL;
 	while (1)
 	{
-		
 		flag = 0;
 		if (isatty(STDIN_FILENO))
 			_puts("> ");
@@ -52,7 +51,7 @@ void launch(void)
 		else
 		{
 			free(buffer);
-			if(isatty(STDIN_FILENO))
+			if (isatty(STDIN_FILENO))
 				_putchar('\n');
 			_exit(0);
 		}
