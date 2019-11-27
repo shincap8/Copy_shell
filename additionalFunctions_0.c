@@ -81,7 +81,7 @@ void print_number(int n)
 void execute(char **cmds)
 {
 	pid_t child;
-	int status = 0;
+	int status = 0, cantLoops = 0;
 
 	child = fork();
 	if (child == -1)

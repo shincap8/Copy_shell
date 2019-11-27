@@ -35,8 +35,6 @@ typedef struct builtins
 
 /* Global variables */
 extern char **environ;
-int cantLoops;
-int flag;
 
 void launch(void);
 void constructor(char **);

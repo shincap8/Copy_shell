@@ -19,15 +19,12 @@ void launch(void)
 	char *buffer, **cmds, *cmd0;
 	size_t buffsize = 0;
 
-	cantLoops = 1;
-
 	signal(SIGINT, signals);
 	signal(SIGQUIT, SIG_IGN);
 
 	buffer = NULL;
 	while (1)
 	{
-		flag = 0;
 		if (isatty(STDIN_FILENO))
 			_puts("> ");
 		if (getline(&buffer, &buffsize, stdin) != -1)
@@ -38,14 +35,12 @@ void launch(void)
 				cmd0 = cmds[0];
 				if (isbuiltin(cmds, buffer) == -1)
 				{
-					flag = 1;
 					constructor(cmds);
 				}
 				if (issame(cmd0, cmds[0]) == 0)
 					free(cmds);
 				else
 					freeall(cmds);
-				cantLoops++;
 			}
 		}
 		else
@@ -117,6 +112,8 @@ int issame(char *cmd0, char *cmds0)
 */
 void signals(int thing)
 {
+	int flag = 0;
+
 	thing = thing;
 	if (flag == 0)
 		_puts("\n> ");
