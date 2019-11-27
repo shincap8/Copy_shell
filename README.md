@@ -69,11 +69,17 @@ $
 | File Name | Description and contents |
 | --- | --- |
 | [manpage](man_1_simple_shell) | This is the manpage for the shell command, this will help us know how to use the shell and the many uses of it, in here we can find examples and the correct sintaxis of the commands.|
-| [_library.h](library.h) |This is the headers file where we can find all the prototypes of our functions and the structures used. |
-| [_stdlib.c](_stdlib.c) |In here we have the atoi function it is used to make integers into characters. |
-| [_string.c](_string.c) |Here we can find the function _strtok that splits a string with a delimiter given and the _strcat function that concatenates two strings given. |
-| [main.c](main.c) |This function has the launch function who starts all the process. |
-| [shell.c](shell.c) |In this file there are 5 functions the launch function who manage the other functions, clearNprint function prints the prompt of the shell, parse function saves each string worth of saving after it is divided with the strtok function, findpath function searches for the path in the environment list where the command typed can be executed|
+| [_library.h](library.h) |This is the headers file where we can find all the prototypes of our functions and the structures used.|
+| [_stdio.c](_stdio.c) |In here we have the puts and putchar function it is used to print characters.|
+| [_stdlib.c](_stdlib.c) |In here we have the atoi function it is used to make integers into characters, the alloc funcction to allocate memory and the freeall function to free the memory allocated when it is not needed anymore.|
+| [_string_0.c](_string_0.c) |Here we can find the function _strtok that splits a string with a delimiter given, _strcat function that concatenates two strings given, _strncmp compares an amount of characters, _strlen counts the characters in a string and _strdup to duplicate strings.|
+| [_string_1.c](_string_1.c) |Here we can find the function _strchr that looks for a character in a string and returns a pointer after the match.|
+| [additionalFunctions_0.c](additionalFunctions_0.c) |Here we find the function cantCmds that counts commands, parse function that divide a string in different parts, constructor function who calls the execute, print number who prints numbers, execute that executes the command given.|
+| [additionalFunctions_1.c](additionalFunctions_1.c) |Here we find the function findpath that looks for the path where the command can be executed, path_concat function that concatenate the path and the command, path_copy function copies the path, help_me this function prints the help for every builtin.|
+| [builtinsFunctions.c](builtinsFunctions.c) |Here we find the function exitF that allows the user to exit, path_concat function that concatenate the path and the command, path_copy function copies the path, help_me this function prints the help for every builtin, unsetF this function is to unset the environment, help function is the one who manage the help print.|
+| [generate-authors.sh](generate-authors.sh) |This script generate the authors file. |
+| [helpFunctions.c](helpFunctions.c) |This file has the messages for the builtin help. |
+| [main.c](main.c) |This function has the launch function who starts all the process, the builtin function who calls the builtins, the issame function who compares two strings and the issignals this function is to catch a special key. |
 ---
 ## Features 
 
