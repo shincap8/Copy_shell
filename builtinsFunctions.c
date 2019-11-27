@@ -42,6 +42,7 @@ int envF(char **cmds)
 	char **envp;
 	int i = 0;
 
+	cmds = cmds;
 	envp = environ;
 	while (envp[i] != NULL)
 	{

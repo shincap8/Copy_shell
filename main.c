@@ -67,7 +67,6 @@ int isbuiltin(char **cmds, char *buffer)
 {
 	builtins_t builtins[] = {
 		{"exit", exitF},
-		{"yaz", yazF},
 		{"env", envF},
 		{"unsetenv", unsetF},
 		{"help", helpF},
